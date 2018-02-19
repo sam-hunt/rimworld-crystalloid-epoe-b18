@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+   <RecipeDef Name="SurgeryCrystalBionic" ParentName="SurgeryCrystalFlesh" Abstract="True">
+      <surgerySuccessChanceFactor>0.99</surgerySuccessChanceFactor>
+      <deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
+      <recipeUsers>
+         <li>Alien_Crystalloid</li>
+		 <li>Alien_CrystalValkyrie</li>
+		 <li>Alien_Ascendant</li>
+      </recipeUsers>
+   </RecipeDef>
+
+	  <!-- Bionics Below -->   
+   
+   <RecipeDef ParentName="SurgeryCrystalBionic">
+      <defName>InstallCPowerArm</defName>
+      <label>install power arm</label>
+      <description>Installs power arm.</description>
+      <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+      <jobString>Installing power arm.</jobString>
+      <workAmount>2000</workAmount>
+      <ingredients>
+         <li>
+            <filter>
+               <categories>
+                  <li>Medicine</li>
+               </categories>
+            </filter>
+            <count>1</count>
+         </li>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>PowerArm</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <categories>
+            <li>Medicine</li>
+         </categories>
+         <thingDefs>
+            <li>PowerArm</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+         <li>CrystalHumanLeftShoulder</li>
+         <li>CrystalHumanRightShoulder</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>PowerArm</addsHediff>
+   </RecipeDef>
+   
+   <RecipeDef ParentName="SurgeryCrystalBionic">
+      <defName>InstallCBionicHand</defName>
+      <label>install bionic hand</label>
+      <description>Installs bionic hand.</description>
+      <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+      <jobString>Installing bionic hand.</jobString>
+      <workAmount>2000</workAmount>
+      <ingredients>
+         <li>
+            <filter>
+               <categories>
+                  <li>Medicine</li>
+               </categories>
+            </filter>
+            <count>1</count>
+         </li>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>BionicHand</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <categories>
+            <li>Medicine</li>
+         </categories>
+         <thingDefs>
+            <li>BionicHand</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+         <li>CrystalHumanLeftHand</li>
+         <li>CrystalHumanRightHand</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>BionicHand</addsHediff>
+   </RecipeDef>
+   
+   <RecipeDef ParentName="SurgeryCrystalBionic">
+      <defName>InstallCBionicFoot</defName>
+      <label>install bionic foot</label>
+      <description>Installs bionic foot.</description>
+      <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+      <jobString>Installing bionic foot.</jobString>
+      <workAmount>2000</workAmount>
+      <ingredients>
+         <li>
+            <filter>
+               <categories>
+                  <li>Medicine</li>
+               </categories>
+            </filter>
+            <count>1</count>
+         </li>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>BionicFoot</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <categories>
+            <li>Medicine</li>
+         </categories>
+         <thingDefs>
+            <li>BionicFoot</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+         <li>CrystalHumanLeftFoot</li>
+         <li>CrystalHumanRightFoot</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>BionicFoot</addsHediff>
+   </RecipeDef>
+
+   <RecipeDef ParentName="SurgeryCrystalBionic">
+		<defName>InstallCBionicSpine</defName>
+		<label>install bionic spine</label>
+		<description>Installs a bionic spine.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing a bionic spine.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BionicSpine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>BionicSpine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>BionicSpine</addsHediff>
+	</RecipeDef>
+</Defs>

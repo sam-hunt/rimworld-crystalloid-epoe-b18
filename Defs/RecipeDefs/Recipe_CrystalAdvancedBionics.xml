@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef Abstract="True" Name="SurgeryCrystalAdvanced" ParentName="SurgeryCrystalFlesh">
+        <surgerySuccessChanceFactor>0.99</surgerySuccessChanceFactor>
+        <deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
+        <recipeUsers>
+            <li>Alien_Crystalloid</li>
+            <li>Alien_CrystalValkyrie</li>
+            <li>Alien_Ascendant</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedPowerArm</defName>
+        <label>install advanced power arm</label>
+        <description>Installs advanced power arm.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced power arm.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedPowerArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedPowerArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftShoulder</li>
+            <li>CrystalHumanRightShoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedPowerArm</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedBionicArm</defName>
+        <label>install advanced bionic arm</label>
+        <description>Installs advanced bionic arm.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic arm.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedBionicArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedBionicArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftShoulder</li>
+            <li>CrystalHumanRightShoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedBionicArm</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedBionicLeg</defName>
+        <label>install advanced bionic leg</label>
+        <description>Installs advanced bionic leg.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic leg.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedBionicLeg</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedBionicLeg</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftLeg</li>
+            <li>CrystalHumanRightLeg</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedBionicLeg</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedBionicHand</defName>
+        <label>install advanced bionic hand</label>
+        <description>Installs advanced bionic hand.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic hand.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedBionicHand</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedBionicHand</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftHand</li>
+            <li>CrystalHumanRightHand</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedBionicHand</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedBionicFoot</defName>
+        <label>install advanced bionic foot</label>
+        <description>Installs bionic foot.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic foot.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedBionicFoot</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedBionicFoot</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftFoot</li>
+            <li>CrystalHumanRightFoot</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedBionicFoot</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedBionicEye</defName>
+        <label>install advanced bionic eye</label>
+        <description>Installs advanced bionic eye.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic eye.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedBionicEye</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedBionicEye</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalLeftEye</li>
+            <li>CrystalRightEye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedBionicEye</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCExoskeletonSuit</defName>
+        <label>install exoskeleton suit</label>
+        <description>Installs exoskeleton suit.</description>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <jobString>Installing exoskeleton suit.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ExoskeletonSuit</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>ExoskeletonSuit</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanTorso</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>ExoskeletonSuit</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalAdvanced">
+        <defName>InstallCAdvancedBionicSpine</defName>
+        <label>install advanced bionic spine implant</label>
+        <description>Installs advanced bionic spine.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic spine.</jobString>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AdvancedBionicSpine</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>AdvancedBionicSpine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AdvancedBionicSpine</addsHediff>
+    </RecipeDef>
+
+</Defs>

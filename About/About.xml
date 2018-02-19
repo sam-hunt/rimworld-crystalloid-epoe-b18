@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Crystalloid EPOE Patch B18</name>
+    <author>shunter</author>
+    <url>https://github.com/sam-hunt/rimworld-epoe-crystalloids</url>
+    <targetVersion>0.18.1722</targetVersion>
+    <description>EPOE for crystalloids, based on AtomicRavioli's A17 patch. Version 0.1</description>
+</ModMetaData>
