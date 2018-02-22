@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffGiverSetDef>
+        <defName>CrystalConstruct</defName>
+        <hediffGivers>
+            <li Class="HediffGiver_Bleeding">
+                <hediff>CrystalConstructIchorLoss</hediff>
+            </li>
+        </hediffGivers>
+    </HediffGiverSetDef>
+
+    <HediffGiverSetDef>
+        <defName>CrystalStandard</defName>
+        <hediffGivers>
+            
+            <!-- Environmental -->
+            <li Class="HediffGiver_Bleeding">
+                <hediff>CrystalloidIchorLoss</hediff>
+            </li>
+            <li Class="HediffGiver_Hypothermia">
+                <hediff>Hypothermia</hediff>
+            </li>
+            <li Class="HediffGiver_Heat">
+                <hediff>Heatstroke</hediff>
+            </li>
+
+            <!-- Birthday long-term chronic-->
+            <li Class="HediffGiver_Birthday">
+                <hediff>BadBack</hediff>
+                <partsToAffect>
+                    <!-- This should affect the spine rather than the torso -->
+                    <li>Spine</li>
+                </partsToAffect>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0.5, 0)</li>
+                        <li>(0.90, 0.0093)</li>
+                        <li>(0.95, 0.01395)</li>
+                        <li>(0.975, 0.01395)</li>
+                        <li>(1, 0.0186)</li>
+                    </points>
+                </ageFractionChanceCurve>
+            </li>
+
+            <li Class="HediffGiver_Birthday">
+                <hediff>CrystalPsionics</hediff>
+                <partsToAffect>
+                    <li>PsionicNode</li>
+                </partsToAffect>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0, 1)</li>
+                        <li>(0.000001, 1)</li>
+                    </points>
+                </ageFractionChanceCurve>
+                <averageSeverityPerDayBeforeGeneration>0.0000125</averageSeverityPerDayBeforeGeneration>
+            </li>
+
+            <li Class="HediffGiver_Birthday">
+                <hediff>Frail</hediff>
+                <partsToAffect>
+                    <li>CrystalHumanTorso</li>
+                </partsToAffect>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0.725, 0)</li>
+                        <li>(0.85, 0.01395)</li>
+                        <li>(0.975, 0.02604)</li>
+                    </points>
+                </ageFractionChanceCurve>
+            </li>
+
+            <li Class="HediffGiver_Birthday">
+                <hediff>Dementia</hediff>
+                <partsToAffect>
+                    <li>CrystalBrain</li>
+                </partsToAffect>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0.90, 0)</li>
+                        <li>(0.95, 0.0093)</li>
+                        <li>(1.15, 0.093)</li>
+                    </points>
+                </ageFractionChanceCurve>
+            </li>
+
+            <li Class="HediffGiver_Birthday">
+                <hediff>Alzheimers</hediff>
+                <partsToAffect>
+                    <li>CrystalBrain</li>
+                </partsToAffect>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0.52, 0)</li>
+                        <li>(0.75, 0.00061)</li>
+                        <li>(0.9, 0.0012)</li>
+                        <li>(1, 0.002)</li>
+                        <li>(1.5, 0.003)</li>
+                    </points>
+                </ageFractionChanceCurve>
+                <averageSeverityPerDayBeforeGeneration>0.001</averageSeverityPerDayBeforeGeneration>
+            </li>
+
+        </hediffGivers>
+    </HediffGiverSetDef>
+
+    <HediffGiverSetDef>
+        <defName>CrystalColossusPassive</defName>
+        <hediffGivers>
+            <li Class="HediffGiver_Birthday">
+                <hediff>CrystalBehemoth</hediff>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0, 1)</li>
+                        <li>(1, 1)</li>
+                    </points>
+                </ageFractionChanceCurve>
+            </li>
+        </hediffGivers>
+    </HediffGiverSetDef>
+
+</Defs>
