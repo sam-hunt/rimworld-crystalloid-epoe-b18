@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- 
+        Thematically, it doesn't make sense to transplant human organs or limbs 
+        onto crystalloid morphologies. However in the interest of simplicity, it
+        is not ideal to define a new set of unique physical crystalline organ
+        body part things to clutter stockpiles and trader inventories.
+
+        So we'll compromise, allowing some surgeries using human organs and
+        limbs, but forcing crystal (for limbs), and refined crystal (for organs)
+        as an additional ingredient to these surgeries to represent the 
+        difference in morphology, and additional complexity of the transplant.
+        
+
+        Note however with regard to vanilla human surgeries that:
+
+        Crystalloids appear to have no such crystalline liver, kidneys, or lungs.
+            1. Blood filtration (liver) is handled by the nutrient extractor.
+            2. Blood filtration (kidneys) is handled by the crystalline heart.
+            3. Breathing is handled by the crystalline brain.
+
+        And with regard to EPOE human surgeries:
+
+        Crystalloids appear to have no such crystalline nose, ears, or stomach.
+            1. No Nasal/Olfactory subsystem exists in vanilla or EPOE anyhow.
+            2. Hearing is handled by the crystalline brain.
+            3. Eating/Metabolism is handled by the nutrient extractor.
+
+        As such, we'll omit defining surgeries using these physiological organs.
+
+    -->
+
+    <RecipeDef Name="SurgeryCrystalNatural" ParentName="SurgeryCrystalFlesh" Abstract="True">
+        <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+        <deathOnFailedSurgeryChance>0.3</deathOnFailedSurgeryChance>
+        <recipeUsers>
+            <li>Alien_Crystalloid</li>
+            <li>Alien_CrystalValkyrie</li>
+            <li>Alien_Ascendant</li>
+        </recipeUsers>
+    </RecipeDef>
+
+
+    <!-- Vanilla -->
+
+    <RecipeDef ParentName="SurgeryCrystalNatural">
+        <defName>InstallCrystalNaturalHeart</defName>
+        <label>install crystalline heart</label>
+        <description>Installs crystalline heart.</description>
+        <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+        <jobString>Installing crystalline heart.</jobString>
+        <workAmount>2000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Heart</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RefinedCrystal</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>Heart</li>
+                <li>RefinedCrystal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHeart</li>
+        </appliedOnFixedBodyParts>
+    </RecipeDef>
+
+
+    <!-- EPOE -->
+
+    <RecipeDef ParentName="SurgeryCrystalNatural">
+        <defName>InstallCrystalNaturalEye</defName>
+        <label>install crystalline eye</label>
+        <description>Installs crystalline eye.</description>
+        <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+        <jobString>Installing crystalline eye.</jobString>
+        <workAmount>1200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Eye</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RefinedCrystal</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>Eye</li>
+                <li>RefinedCrystal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalRightEye</li>
+            <li>CrystalLeftEye</li>
+        </appliedOnFixedBodyParts>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalNatural">
+        <defName>InstallCrystalNaturalJaw</defName>
+        <label>install nutrient extractor</label>
+        <description>Installs nutrient extractor.</description>
+        <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+        <jobString>Installing nutrient extractor.</jobString>
+        <workAmount>1200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Jaw</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RefinedCrystal</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>Jaw</li>
+                <li>RefinedCrystal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalExtractor</li>
+        </appliedOnFixedBodyParts>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryNatural">
+        <defName>InstallCrystalNaturalArm</defName>
+        <label>install crystalline arm</label>
+        <description>Installs crystalline arm.</description>
+        <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+        <jobString>Installing crystalline arm.</jobString>
+        <workAmount>1200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Arm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Crystal</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>Arm</li>
+                <li>Crystal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftArm</li>
+            <li>CrystalHumanRightArm</li>
+        </appliedOnFixedBodyParts>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryCrystalNatural">
+        <defName>InstallCrystalNaturalLeg</defName>
+        <label>install crystalline leg</label>
+        <description>Installs crystalline leg.</description>
+        <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+        <jobString>Installing crystalline leg.</jobString>
+        <workAmount>1200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Leg</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Crystal</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>Leg</li>
+                <li>Crystal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>CrystalHumanLeftLeg</li>
+            <li>CrystalHumanRightLeg</li>
+        </appliedOnFixedBodyParts>
+    </RecipeDef>
+
+</Defs>
